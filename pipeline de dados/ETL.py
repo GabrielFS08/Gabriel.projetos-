@@ -1,6 +1,7 @@
 import json
 import requests
-#import pandas as pd
+import numpy
+import pandas as pd
 
 
 #função para extrair os dados da API DummyJSON
@@ -20,12 +21,35 @@ def load_data(data, path):
     with open(f"{path}/{id}.json", "w") as file:
         json.dump(data, file)
 
+
 endpoint_users = "https://dummyjson.com/users/1"
+endpoint_products = "https://dummyjson.com/products/"
 
+def loop_load_data(endpoint):
+    url = "https://dummyjson.com/" + endpoint
+    i = 1
+    limit = 10
+    while True:
+        data = extract_data(url + "/" + str(i))
+        if data and i < limit:#se o data users tiver alguma coisa...
+            load_data(data, "raw/" + endpoint)
+        elif i >= limit:
+            break
+        else:
+            print(f"Erro ao extrair dados da API: {data}")
+            break
+        i += 1
 
-endpoint_products = "https://dummyjson.com/products/1"
+def transform_data_json_to_csv(endpoint, i):
+    with open(f"raw/{endpoint}/{i}.json", "r") as file:
+        data = json.load(file)
+    #convertendo o json para csv
+    df = pd.DataFrame(data)
+    df.to_csv(f"curated/{endpoint}/{i}.csv", index=False)
 
+endpoints = ["user", "products"]
 
-for i in range(1, 10):
-    data_users = extract_data(endpoint_users + str(i))
-    load_data(data_users, "users")
+#for endpoint in endpoints:
+    #loop_load_data(endpoint)
+
+transform_data_json_to_csv("user", 1)
