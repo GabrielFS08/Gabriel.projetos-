@@ -4,5 +4,3 @@
   * Pandas
   * PowerBI
   * Plotly
-  * 
-  
