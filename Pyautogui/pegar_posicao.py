@@ -1,8 +1,9 @@
 import time
 import pyautogui
 
-time.sleep(5) # o tempo necessário para escolher aonde vai ser a posição desejada.
-print(pyautogui.position()) # vai mostrar a posição do mouse na tela escolhida.
+# o tempo necessário para escolher aonde vai ser a posição desejada.
+time.sleep(5)
+# vai mostrar a posição do mouse na tela escolhida.
+print(pyautogui.position())
 
-pyautogui.scroll(200) 
-
+pyautogui.scroll(200)
