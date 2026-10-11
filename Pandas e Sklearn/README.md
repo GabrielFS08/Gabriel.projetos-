@@ -1,23 +1,14 @@
-# Projeto de previsão com machine learning
+# Projeto de previsão e análise com machine learning
 
-fiz uma análise de Score de cliente em um banco. Imagine
-que você trabalha em um banco e tem uma base de dados de 100.000 clientes e precisa verificar o score (pontuação) do
-cliente para saber se é um bom cliente ou não.
-
-Com isso nós vamos conseguir fazer uma previsão dos clientes para saber se ele vai ser um cliente com um bom score ou não.
+Realizei uma análise da nota de crédito dos clientes de um banco, utilizando uma base de dados de 100.000 registros. O objetivo do projeto é avaliar o perfil de cada pessoa para prever o seu pagamento em dia e identificar quem é um bom cliente.
 
 Os passo que vamos fazer são:
 
-• Importar a base de dados
-
-• Verificar informações vazias
-
-• Fazer o tratamento na base de dados
-
-• Selecionar as colunas de treino para o modelo
-
-• Treinar 2 modelos
-
-• Verificar o melhor modelo
-
-• Verificar quais as características mais importantes para definir o score do cliente
+- Importar a base de dados
+- Visualizar as informaçoes dela
+- Verificar informações vazias
+- Fazer o tratamento na base de dados
+- Selecionar as colunas de treino para o modelo
+- Treinar 2 modelos
+- Verificar o melhor modelo
+- Verificar quais as características mais importantes para definir o score do cliente

@@ -52,7 +52,3 @@ for linha in tabela.index: #tabela.index vai percorrer somentes as linhas
     
     pyautogui.click(x=908, y=932)
     pyautogui.scroll(200)#volta pro início da tela com o scroll pra cima
-    
-
-
-
