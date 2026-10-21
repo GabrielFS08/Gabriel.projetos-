@@ -18,7 +18,6 @@ uv sync
 - Plotly
 - Json
 - Numpy
-- Selenium
 - pyautogui
 - sklearn
 ## Ferramentas usadas:
